@@ -37,9 +37,16 @@ section {
 }
 
 .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
 
 .logo-search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .logo {
@@ -54,6 +61,9 @@ section {
   background: #1f1f27;
   padding: 10px 20px;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .search-bar input {
@@ -71,12 +81,18 @@ section {
 }
 
 .options {
+  display: flex;
+  gap: 20px;
 }
 
 .option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-width: 60px;
   text-transform: capitalize;
   cursor: pointer;
+  gap: 5px;
 }
 
 .option i {
@@ -87,6 +103,10 @@ section {
 .categories {
   background-color: #2b2d36;
   padding-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .category {
@@ -111,6 +131,11 @@ section {
 }
 
 .view-options {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 15px;
 }
 
 i.fa-th-list {
@@ -118,11 +143,17 @@ i.fa-th-list {
 }
 
 .section-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-bottom: 20px;
   border-bottom: 1px solid #8d8ba5;
 }
 
 .section-control .view-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   border: 1px solid #8d8ba5;
@@ -130,7 +161,9 @@ i.fa-th-list {
 }
 
 .products {
+  display: flex;
   margin-top: 40px;
+  gap: 20px;
 }
 
 .product {
@@ -147,12 +180,20 @@ i.fa-th-list {
 }
 
 .product-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 28px;
+  padding-bottom: 10px;
 }
 
 .product-description {
+  display: flex;
+  justify-content: center;
+  align-items: start;
   line-height: 24px;
   color: #8d8ba5;
+  height: 110px;
 }
 
 .product-price {
@@ -177,14 +218,25 @@ i.fa-th-list {
   cursor: pointer;
 }
 
-/* 👇👇👇  EDIT STYLES BENEATH  👇👇👇*/
+.product-action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+  height: 20px;
+}
 
 /* GRID VIEW STYLES */
-
 .grid.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .grid .product {
+  display: flex;
+  flex-direction: column;
   width: 300px;
   padding-bottom: 30px;
 }
@@ -199,20 +251,25 @@ i.fa-th-list {
 
 .grid .product-info {
   text-align: center;
-  padding: 0 20px 30px;
+  padding: 20px 30px;
 }
 
 .grid .product-action {
   padding-top: 30px;
   border-top: 1px solid #8d8ba5;
+  justify-content: center; 
 }
 
 /* LINE VIEW STYLES */
-
 .lines.products {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .lines .product {
+  display: flex;
+  flex-direction: row;
   padding: 20px;
 }
 
@@ -222,20 +279,34 @@ i.fa-th-list {
 }
 
 .lines .product-data {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .lines .product-info {
+  padding-bottom: 20px;
 }
 
 .lines .product-action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
 }
 
 /* LINES-ACTION VIEW */
-
 .lines-action.products {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .lines-action .product {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .lines-action .product-image-wrapper {
@@ -244,13 +315,46 @@ i.fa-th-list {
 }
 
 .lines-action .product-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .lines-action .product-info {
+  flex: 1;
+  padding-right: 20px;
+  padding-top: 20px;
 }
 
 .lines-action .product-action {
-  border-left: 1px solid #8d8ba5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding-left: 30px;
+  border-left: 1px solid #8d8ba5;
   min-width: 200px;
+  height: 100%;
 }
+
+.products .product-name,
+.products .product-description {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.grid .product-name,
+.grid .product-description,
+.lines-action .product-name,
+.lines-action .product-description {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+
+
+
+
